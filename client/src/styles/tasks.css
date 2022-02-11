@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rationale&display=swap");
+
+:root {
+  --yellow: #ffc107;
+  --lightyellow: rgb(201, 158, 30);
+}
+
+.tasks {
+  width: 540px;
+  margin: 0px auto 0 auto;
+}
+
+.task {
+  position: relative;
+  list-style-type: none;
+  height: 65px;
+  background-color: var(--yellow);
+  margin-top: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  border: 0px;
+  margin-left: 15px;
+}
+
+.desc {
+  color: #2f2979;
+  font-size: 1.375rem;
+  font-family: "Poppins";
+  width: 400px;
+  overflow: hidden;
+}
+
+.delete__icon {
+  vertical-align: middle;
+  font-size: 30px;
+  color: #2f2979;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .tasks {
+    width: 75%;
+    margin: 0px auto 0 auto;
+  }
+
+  .task {
+    position: relative;
+    list-style-type: none;
+    height: 40px;
+    background-color: var(--yellow);
+    margin-top: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  .desc {
+    font-size: 1.1rem;
+    width: 50%;
+  }
+
+  .delete__icon {
+    font-size: 20px;
+    color: #2f2979;
+  }
+}

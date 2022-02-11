@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+
+:root {
+  --yellow: #ffc107;
+  --lightyellow: rgb(201, 158, 30);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 75px;
+  width: 100%;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  vertical-align: middle;
+  margin-left: 1%;
+}
+
+.app__name {
+  font-size: 1.5625rem;
+  font-family: "Rationale";
+  color: var(--yellow);
+}
+
+.btns {
+  position: absolute;
+  top: 50%;
+  right: 1.5%;
+  transform: translateY(-50%);
+  height: 100%;
+  width: 240px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btns > button {
+  outline: none;
+  color: #000000;
+  background-color: var(--yellow);
+  font-size: 1.25rem;
+  font-family: "Rationale";
+  border: 0px;
+  padding: 10px 30px;
+  border-radius: 25px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.btns > button:hover {
+  background-color: var(--lightyellow);
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+
+  .app__name {
+    font-size: 1.3rem;
+    margin-left: 10px;
+  }
+
+  .btns {
+    width: 150px;
+    right: 10px;
+  }
+
+  .btns > button {
+    outline: none;
+    color: #000000;
+    background-color: var(--yellow);
+    font-size: 1rem;
+    font-family: "Rationale";
+    border: 0px;
+    padding: 5px 15px;
+    border-radius: 25px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .btns > button:hover {
+    background-color: var(--lightyellow);
+  }
+}

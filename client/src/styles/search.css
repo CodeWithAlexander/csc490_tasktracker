@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rationale&display=swap');
+
+:root {
+  --yellow: #ffc107;
+  --lightyellow: rgb(201, 158, 30);
+}
+
+.search__input {
+  outline: none;
+  background-color: var(--yellow);
+  width: 200px;
+  height: 35px;
+  padding: 10px 25px;
+  border: 0px;
+  border-radius: 10px;
+  font-size: 1.375rem;
+  color: #2F2979;
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 600px) {
+  .search__input {
+    outline: none;
+    background-color: var(--yellow);
+    width: 150px;
+    height: 20px;
+    padding: 10px 25px;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #2F2979;
+    font-family: "Poppins";
+    margin-bottom: 30px;
+  }
+}

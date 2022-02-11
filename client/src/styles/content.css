@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+
+:root {
+  --yellow: #ffc107;
+  --lightyellow: rgb(201, 158, 30);
+}
+
+.your__tasks {
+  text-align: center;
+  font-weight: 400;
+  color: var(--yellow);
+  font-family: "Rationale";
+  font-size: 2.8125rem;
+}
+
+.inputs {
+  width: 540px;
+  margin: 32px auto 0px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  .inputs {
+    width: auto;
+  }
+
+  .your__tasks {
+  font-size: 2rem;
+  }
+
+  .inputs {
+    flex-direction: column;
+    align-items: center;
+  }  
+}
