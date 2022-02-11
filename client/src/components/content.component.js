@@ -5,6 +5,7 @@ import Add from "./add.component";
 import Tasks from "./tasks.component";
 import { useState } from "react";
 import axios from "axios";
+import ReturnHome from "./return-home.component";
 
 export const Content = (props) => {
   const [tasks, setTasks] = useState([]);
@@ -64,6 +65,8 @@ export const Content = (props) => {
         search={search}
         handleCheck={handleCheck}
         handleDelete={handleDelete}
+      />
+      <ReturnHome
       />
     </>
   );

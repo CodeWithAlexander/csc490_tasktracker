@@ -3,10 +3,13 @@ import { useState } from "react";
 import CreateUser from "./create-user.component";
 import SearchUser from "./search-user.component";
 import axios from "axios";
+import ErrorUser from "./error-user.component";
+
 const User = () => {
   const [searchUser, setSearchUser] = useState("");
   const [newUser, setNewUser] = useState("");
   const [status, setStatus] = useState("");
+ 
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -20,10 +23,13 @@ const User = () => {
           window.location.href = `http://localhost:3000/${result[0]._id}`;
         }
       })
-      .catch((error) => {
+      .catch((error) =>{  
+        console.log("hello");
+      setStatus(`${searchUser} does not exist`);
       });
+      setSearchUser("");
+      setNewUser("");
   };
-
   const handleCreate = (e) => {
     e.preventDefault();
     const user = {
@@ -32,15 +38,17 @@ const User = () => {
     axios
       .post("http://localhost:5000/users/add", user)
       .then((res) => {
+          window.location.href = `http://localhost:3000/${res.data._id}`;
         setStatus("");
       })
-      .catch((err) => setStatus("Username already exists"));
+      .catch((err) => setStatus(`Username "${user.username}" already exists`));
 
     setNewUser("");
   };
 
   return (
     <>
+    
       <div className="inputs">
         <SearchUser
           searchUser={searchUser}
@@ -53,7 +61,13 @@ const User = () => {
           handleCreate={handleCreate}
         />
       </div>
-      <p>{status}</p>
+   { status ? (
+      <ErrorUser 
+      status={status}
+      setStatus={setStatus}
+      /> ):( <>
+      </>)
+   }
     </>
   );
 };

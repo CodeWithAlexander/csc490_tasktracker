@@ -1,0 +1,38 @@
+.user__error{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10%;
+}
+
+
+
+
+.user__error span{
+    font-size: 1.375rem;
+    color: #2F2979;
+    border-radius: 10px;
+    padding-top: 50px;
+    text-align: center;
+    height: 100px;
+    width: 20%;
+    background-color: #ffc107;
+    animation: slidein 1s ease-in;
+    overflow: hidden;
+    font-family: "Poppins";
+}
+
+@keyframes slidein{
+    0%   { 
+        transform: translatex(-300%); 	     
+    }
+        90% { 
+        transform: translatex(10%); 
+        }
+        100%{
+            transform: translateX(0%);
+        }
+
+}

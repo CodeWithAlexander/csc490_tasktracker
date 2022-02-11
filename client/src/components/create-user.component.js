@@ -1,6 +1,7 @@
 import React from "react";
 
-const CreateUser = ({ newUser, setNewUser, handleCreate }) => {
+
+const CreateUser = ({ newUser, setNewUser, handleCreate,setStatus }) => {
   return (
     <>
       <form onSubmit={(e) => handleCreate(e)}>
